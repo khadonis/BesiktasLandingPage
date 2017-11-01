@@ -1,0 +1,80 @@
+.form-wr {
+    @media (min-width: $screen-lg-min) {
+        position: absolute;
+        top: 50vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-height: 100%;
+        height: auto;
+        padding: 0 15px;
+        width: 100%;
+    }
+}
+
+.form {
+    &-logo {
+        position: relative;
+        top: 15px;
+        img {
+            width: 120px;
+        }
+    }
+    &-text {
+        width: 100%;
+    }
+    &-select,
+    &-text {
+        margin: 5px 0;
+        padding: 15px 5px;
+        border: 1px solid lighten($gray-darker, 65%);
+        .webkit & {
+            border: 0.5px solid lighten($gray-darker, 65%);
+        }
+        outline: none;
+        appearance: none;
+        background-color: $gray-lighter;
+        color: $gray_darker;
+        &:focus {
+            background-color: #fff;
+        }
+        @media (min-width: $screen-lg-min) {
+            // padding: 8px 5px;
+        }
+    }
+    &-select {
+        width: 100%;
+        appearance: none;
+        margin-bottom: 15px;
+    }
+    &-fieldset {
+        margin-top: 10px;
+        input {
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background-color: transparent;
+            margin-left: 5px;
+            margin-right: 2px;
+            position: relative;
+            &:checked {
+                background-color: $gray_darker;
+            }
+            &:after {
+                content: '';
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 1px solid $gray_darker;
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                display: block;
+            }
+        }
+    }
+    text-align: left;
+}
+.eko {
+    animation: bonbon 3s infinite ease-out;
+}

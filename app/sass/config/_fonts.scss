@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: 
+  url("../fonts/HelBold.woff2") format("woff2"), /* Modern Browsers */
+  url("../fonts/HelBold.woff") format("woff"), /* Modern Browsers */
+  url("../fonts/HelBold.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/HelBold.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: 900;
+  font-style: 900;
+}
+@font-face {
+    font-family: "HelveticaNeue";
+    src: 
+    url("../fonts/HelReg.woff2") format("woff2"), /* Modern Browsers */
+    url("../fonts/HelReg.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/HelReg.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/HelReg.ttf") format("truetype"); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+  }
+ 

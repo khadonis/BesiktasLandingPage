@@ -1,0 +1,57 @@
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    &.is-loaded {
+        font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+    }
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+input::placeholder {
+    color: $gray_darker;
+    opacity: 0.6;
+}
+input:focus::placeholder {
+    opacity: 0;
+}
+
+.logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+    z-index: 99; //margin: 60px 15px 15px;
+    width: 80px;
+    img {
+        width: 100%;
+    }
+    @media (min-width: $screen-xs-min) {
+        //    margin-bottom: 60px;
+        left: 30px;
+        top: 30px;
+    }
+    @media (min-width: $screen-lg-min) {
+        //   margin: 30px 15px 15px;
+        width: 100px;
+        left: auto;
+        right: 30px;
+    }
+}

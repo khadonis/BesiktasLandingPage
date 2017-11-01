@@ -1,0 +1,18 @@
+.ballons {
+    @media (min-width: $screen-xs-min) {
+        max-width: 600px;
+        margin: auto;
+    }
+}
+
+.baloon {
+    width: 48%;
+    padding: 1%;
+    display: inline-block;
+    img {
+        width: 100%;
+    }
+    @media (min-width:$screen-xs) {
+        width: 32.333%;
+    }
+}

@@ -1,0 +1,51 @@
+.spot {
+    @media (min-width: $screen-xs) {
+        //  background-image: url('../images/DKYAda-header-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; //padding-top: 15px;
+    }
+    @media (min-width:$screen-sm-min) {
+        background-position: bottom;
+    }
+    @media (min-width:$screen-lg-min) {
+        min-height: 100vh;
+        height: 100vh;
+        position: relative;
+        border: 20px solid#fff;
+        border-left: 0;
+        box-sizing: border-box;
+    }
+    min-height: 62.25vw;
+    padding: 0;
+    overflow: hidden;
+    &-logo {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        z-index: 2;
+        img {
+            width: 150px;
+        }
+    }
+    .slider {
+        overflow: hidden;
+    }
+    .item {
+        img {
+            height: auto;
+            width: 100%;
+            position: relative;
+            transition-property: transform;
+            transform: scale(1.0);
+            transform-origin: 50% 50%;
+            @media (min-width: $screen-lg-min) {
+                top: -20px;
+                height: 100vh;
+                width: auto;
+            }
+        }
+        &.slick-active img {
+            animation: myMove 3s 1 ease-out;
+        }
+    }
+}

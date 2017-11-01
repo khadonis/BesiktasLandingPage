@@ -1,0 +1,26 @@
+.is-loaded .title {
+    font-size: 30px;
+    font-family: "HelveticaNeueBold", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    @media (min-width: $screen-xs-min) {
+        color: #ffffff;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 80px;
+    }
+}
+
+.is-loaded h3 {
+    strong {
+        font-family: "HelveticaNeueBold", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    }
+    font-family: "HelveticaNeue",
+    Helvetica,
+    Arial,
+    sans-serif;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 300;
+    @media (min-width: $screen-lg-min) {
+        margin: 40px auto 20px;
+    }
+}
