@@ -1,6 +1,17 @@
 $(document).ready(function () {
     document.body.className += ' is-loaded';
-
+    
+    $('#ad').keyup(function () {
+        $('.slider-text img').removeClass('visible');
+        $('.slider-text img').addClass('hidden');
+        if($(this).val().length > 0) {
+            $('#userName').text($(this).val() + ',');
+        } else {
+            $('#userName').text($(this).val());
+            $('.slider-text img').addClass('visible');
+            $('.slider-text img').removeClass('hidden');
+        }
+    });
     //slider 
     /* $('.slider').slick({
         fade: true,
