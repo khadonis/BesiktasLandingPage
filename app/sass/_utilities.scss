@@ -248,6 +248,9 @@
         padding-right: 0.5rem;
     }
 }
+.mt0{
+    margin-top: 0;
+}
 
 @include sprites($spritesheet-sprites);
 .icons {

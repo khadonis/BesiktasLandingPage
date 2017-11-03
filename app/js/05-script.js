@@ -1,10 +1,10 @@
 $(document).ready(function () {
     document.body.className += ' is-loaded';
-    
+
     $('#ad').keyup(function () {
         $('.slider-text img').removeClass('visible');
         $('.slider-text img').addClass('hidden');
-        if($(this).val().length > 0) {
+        if ($(this).val().length > 0) {
             $('#userName').text($(this).val() + ',');
         } else {
             $('#userName').text($(this).val());
@@ -121,4 +121,34 @@ $('#legalWarning').click(function () {
 $.browser.chrome = $.browser.webkit && !!window.chrome;
 if ($.browser.chrome) {
     $('html').addClass('webkit');
+}
+
+//screenShot
+$(document).ready(function () {
+    $('body').append('<div id="tempCanvas"/>');
+    $('body').append('<a id="tempLink"/>');
+    $('#getScreen').attr('href', 'javascript:getScreenshot()');
+    $('#mobileGetScreen').attr('href', 'javascript:getScreenshot()');
+});
+function getScreenshot() {
+    var emptyDiv = $('#tempCanvas');
+    var tempLink = $('#tempLink');
+    var el = $('.slider');
+    html2canvas(el, {
+        onrendered: function (canvas) {
+            emptyDiv.html("");
+            emptyDiv.append(canvas);
+            if (navigator.userAgent.indexOf("MSIE ") > 0 ||
+                navigator.userAgent.match(/Trident.*rv\:11\./)) {
+                var blob = canvas.msToBlob();
+                window.navigator.msSaveBlob(blob, 'dky_screenshot.png');
+            }
+            else {
+                tempLink.attr('href', canvas.toDataURL("image/png"));
+                tempLink.attr('download', 'dky_screenshot.png');
+                tempLink[0].click();
+            }
+            $('canvas').remove();
+        }
+    });
 }
